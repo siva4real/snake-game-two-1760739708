@@ -11,6 +11,9 @@ Highlights:
 - Optional URL ping via query parameter (?url=...) as described below.
 - No external dependencies.
 
+Theme:
+- Updated to a red-themed style (round 2). The UI, canvas backdrop, snake, and food colors are now red/pink shades. No gameplay logic changed.
+
 ## Setup
 No build step is required.
 
@@ -20,6 +23,7 @@ No build step is required.
 Files:
 - index.html — All HTML/CSS/JS is embedded and production-ready.
 - README.md — This file.
+- LICENSE — MIT license.
 
 ## Usage
 Controls:
@@ -59,6 +63,7 @@ Everything lives in index.html for simplicity:
 
 - CSS:
   - A small set of design tokens (CSS variables) for colors and effects.
+  - Red-themed palette for accents, canvas, and controls (updated).
   - Responsive canvas with a subtle grid background, rounded corners, and focus styles.
   - Minimal yet modern UI elements for readability and accessibility.
 
@@ -69,7 +74,7 @@ Everything lives in index.html for simplicity:
   - Loop: Uses requestAnimationFrame with a fixed timestep (accumulator) for consistent movement speed.
   - Input: Arrow keys or WASD to steer; Space to pause/resume; R to reset. Immediate start on first directional input is supported.
   - Collision: Game over on wall hit or self-intersection. Food is placed on a random empty cell.
-  - Rendering: Light grid lines, a gradient food pellet, and rounded snake segments with a highlighted head.
+  - Rendering: Light grid lines, a glowing red food pellet, and rounded snake segments with a highlighted red head (updated).
   - Persistence: High score saved to localStorage under key snakeHighScore:v1.
   - URL param handler: On load, parses ?url and attempts a GET request. It first tries CORS (to read status), then falls back to no-cors (opaque but still performs the request). UI reflects success/warning/error states, but the game runs regardless.
 
@@ -79,24 +84,6 @@ Extensibility tips (not implemented to keep scope tight):
 - Settings persistence for speed or grid size.
 
 ## License
-MIT License
+MIT License — see LICENSE file.
 
 Copyright (c) 2025
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the “Software”), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
